@@ -6,18 +6,22 @@ export class Pending extends Component {
     let tasks = this.props.tasks
     let pendingItems = tasks.map((task,index) => {
       return (
-        <li key={index}>
-          <span>{task}</span>
-          <button id={index} value={task} onClick={this.props.handleCompleteClick}>Move to Completed</button>
-          <button id={index} value={task} onClick={this.props.handleDeletePendingClick}>Delete</button>
+        <li className="taskLi" key={index}>
+          <p>{task}</p>
+          <div>
+            <button id={index} value={task} onClick={this.props.handleCompleteClick}>Move to Completed</button>
+            <button id={index} value={task} onClick={this.props.handleDeletePendingClick}>Delete</button>
+          </div>
           </li>
       )
     })
 
     return (
-      <div>
+      <div className="taskDiv">
         <h3>Pending Items</h3>
-        <ul>{pendingItems}</ul>
+        <div className="table">
+          <ul>{pendingItems}</ul>
+        </div>
       </div>
     )
   }

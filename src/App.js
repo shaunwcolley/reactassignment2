@@ -72,9 +72,12 @@ class App extends Component  {
   render() {
     return (
       <div className="body">
-        <div>
-          <input id="taskBox" onChange={this.handleTextChange} type="text" value={this.state.taskName}/>
-          <button onClick={this.handleSaveClick}>Add</button>
+        <div className="header">
+          <h2>To-Do List</h2>
+          <div>
+            <input id="taskBox" onChange={this.handleTextChange} type="text" value={this.state.taskName}/>
+            <button onClick={this.handleSaveClick}>Add</button>
+          </div>
         </div>
         <Pending tasks={this.state.pendingTasks} handleCompleteClick={this.handleCompleteClick} handleDeletePendingClick={this.handleDeletePendingClick}/>
         <Completed tasks={this.state.completedTasks} handleMoveClick={this.handleMoveClick} handleDeleteCompletedClick={this.handleDeleteCompletedClick}/>

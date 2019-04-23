@@ -5,17 +5,21 @@ export class Completed extends Component {
     let tasks = this.props.tasks
     let completedItems = tasks.map((task,index) => {
       return (
-        <li key={index}>
+        <li className="taskLi" key={index}>
           <span>{task}</span>
-          <button id={index} value={task} onClick={this.props.handleMoveClick}>Move to Pending</button>
-          <button id={index} value={task} onClick={this.props.handleDeleteCompletedClick}>Delete</button>
+          <div>
+            <button id={index} value={task} onClick={this.props.handleMoveClick}>Move to Pending</button>
+            <button id={index} value={task} onClick={this.props.handleDeleteCompletedClick}>Delete</button>
+          </div>
           </li>
       )
     })
     return (
-      <div>
+      <div className="taskDiv">
         <h3>Completed Items</h3>
-        <ul>{completedItems}</ul>
+        <div className="table">
+          <ul>{completedItems}</ul>
+        </div>
       </div>
     )
   }

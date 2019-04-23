@@ -15,4 +15,25 @@
 
 ul {
   list-style: none;
+
+    padding-inline-start: 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskDiv, .taskLi, .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
 }
