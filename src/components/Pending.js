@@ -8,8 +8,8 @@ export class Pending extends Component {
       return (
         <li key={index}>
           <span>{task}</span>
-          <button value={task} onClick={this.props.handleCompleteClick}>Completed</button>
-          <button value={task} onClick={this.props.handleDeletePendingClick}>Delete</button>
+          <button id={index} value={task} onClick={this.props.handleCompleteClick}>Move to Completed</button>
+          <button id={index} value={task} onClick={this.props.handleDeletePendingClick}>Delete</button>
           </li>
       )
     })

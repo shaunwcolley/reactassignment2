@@ -7,8 +7,8 @@ export class Completed extends Component {
       return (
         <li key={index}>
           <span>{task}</span>
-          <button value={task} onClick={this.props.handleMoveClick}>Move to Pending</button>
-          <button value={task} onClick={this.props.handleDeleteCompletedClick}>Delete</button>
+          <button id={index} value={task} onClick={this.props.handleMoveClick}>Move to Pending</button>
+          <button id={index} value={task} onClick={this.props.handleDeleteCompletedClick}>Delete</button>
           </li>
       )
     })

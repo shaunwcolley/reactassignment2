@@ -30,8 +30,8 @@ class App extends Component  {
   }
 
   handleCompleteClick = (e) => {
-    let newPendingTasks = this.state.pendingTasks.filter((task) => {
-      return task !== e.target.value
+    let newPendingTasks = this.state.pendingTasks.filter((task,index) => {
+      return index !== parseInt(e.target.id)
     })
     let task = e.target.value
     this.setState({
@@ -41,8 +41,8 @@ class App extends Component  {
   }
 
   handleMoveClick = (e) => {
-    let newCompletedTasks = this.state.completedTasks.filter((task) => {
-      return task !== e.target.value
+    let newCompletedTasks = this.state.completedTasks.filter((task,index) => {
+      return index !== parseInt(e.target.id)
     })
     let task = e.target.value
     this.setState({
@@ -52,8 +52,8 @@ class App extends Component  {
   }
 
   handleDeleteCompletedClick = (e) => {
-    let newCompletedTasks = this.state.completedTasks.filter((task) => {
-      return task !== e.target.value
+    let newCompletedTasks = this.state.completedTasks.filter((task,index) => {
+      return index !== parseInt(e.target.id)
     })
     this.setState({
       completedTasks: newCompletedTasks
@@ -61,8 +61,8 @@ class App extends Component  {
   }
 
   handleDeletePendingClick = (e) => {
-    let newPendingTasks = this.state.pendingTasks.filter((task) => {
-      return task !== e.target.value
+    let newPendingTasks = this.state.pendingTasks.filter((task,index) => {
+      return index !== parseInt(e.target.id)
     })
     this.setState({
       pendingTasks: newPendingTasks
