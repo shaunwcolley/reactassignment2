@@ -75,7 +75,7 @@ class App extends Component  {
         <div className="header">
           <h2>To-Do List</h2>
           <div>
-            <input id="taskBox" onChange={this.handleTextChange} type="text" value={this.state.taskName}/>
+            <input onChange={this.handleTextChange} type="text" value={this.state.taskName}/>
             <button onClick={this.handleSaveClick}>Add</button>
           </div>
         </div>
